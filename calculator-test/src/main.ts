@@ -38,7 +38,7 @@ let valueStrInMemory: string | null = null;
 let operatorInMemory: string | null = null;
 
 // Functions
-const getValueAsStr = (): string => valueEl.textContent.split(',').join('');
+const getValueAsStr = (): string => valueEl?.textContent?.split(',').join('') || '';
 
 const getValueAsNum = (): number => {
   return parseFloat(getValueAsStr());
