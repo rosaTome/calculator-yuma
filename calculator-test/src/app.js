@@ -155,7 +155,6 @@ equalEl.addEventListener('click', () => {
     }
 });
 
-
 // add event listeners to numbers and buttons 
 for (let i = 0; i < numberElArray.length; i++) {
     const numberEl = numberElArray[i];
@@ -170,7 +169,3 @@ decimalEl.addEventListener('click', () => {
         setStrAsValue(currentValueStr + '.');
     }
 });
-
-
-
-
