@@ -1,6 +1,5 @@
 import './style.scss';
 import './style.css';
-import './app.js';
 
 const valueEl: HTMLDivElement | null = document.querySelector('.value');
 
