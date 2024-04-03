@@ -16,16 +16,32 @@ body {
   height: 1218px;
   padding: 20px;
 }
-
-.display--top__container {
+.calculator .display-container {
   height: 250px;
   padding: 0 20px;
 }
-
-.display-number {
+.calculator .display-number {
   font-size: 130px;
   font-weight: 300;
   margin-bottom: 0 20px 20px 0;
   height: 150px;
   text-align: right;
+}
+
+.buttons-container .button {
+  height: 110px;
+  width: 110px;
+  font-size: 45px;
+  border-radius: 58px;
+  background-color: rgb(84, 84, 84);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttons-container .button.function {
+  color: #000000;
+  background-color: rgb(199, 197, 197);
+}
+.buttons-container .button.operator {
+  background-color: rgb(255, 157, 0);
 }/*# sourceMappingURL=style.css.map */

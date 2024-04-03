@@ -21,17 +21,44 @@ body {
     width: 563px;
     height: 1218px;
     padding: 20px;
+
+    .display-container {
+        height: 250px;
+        padding: 0 20px;
+    }
+
+    .display-number {
+        font-size: 130px;
+        font-weight: 300;
+        margin-bottom: 0 20px 20px 0;
+        height: 150px;
+        text-align: right;
+    }
+    
 }
 
-.display--top__container {
-    height: 250px;
-    padding: 0 20px;
+.buttons-container {
+
+    .button {
+        height: 110px;
+        width: 110px;
+        font-size: 45px;
+        border-radius: 58px;
+        background-color: $tertiary-color-dark;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.function {
+            color: $primary-color;
+            background-color: $tertiary-color-light;
+
+        }
+
+        &.operator {
+            background-color: $secondary-color;
+
+        }
+    }
 }
 
-.display-number {
-    font-size: 130px;
-    font-weight: 300;
-    margin-bottom: 0 20px 20px 0;
-    height: 150px;
-    text-align: right;
-}
