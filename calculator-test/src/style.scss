@@ -76,4 +76,19 @@ body {
     }
 }
 
+// media queries for tablet and desktop 
+
+@media only screen and (min-width: 768px) {
+    .calculator {
+        width: 70%;
+        height: 80vh;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .calculator {
+        width: 50%;
+        height: 80vh;
+    }
+}
 
