@@ -63,7 +63,7 @@ const setStrAsValue = (valueStr) => {
 
 const handleNumberClick = (numStr) => {
     const currentValueStr = getValueAsStr();
-    if (currentValueStr === '0' || valueStrInMemory !== null) {
+    if (currentValueStr = '0' || valueStrInMemory !== null) {
         setStrAsValue(numStr);
     } else {
         setStrAsValue(currentValueStr + numStr);

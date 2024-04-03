@@ -60,11 +60,11 @@ const setStrAsValue = (valueStr: string): void => {
 };
 
 const handleNumberClick = (numStr: string): void => {
-  const currentValueStr = getValueAsStr();
-  if (currentValueStr === '0') {
-    setStrAsValue(numStr);
+  const currentValueStr: string = getValueAsStr();
+  if (currentValueStr === '0' || valueStrInMemory !== null) {
+      setStrAsValue(numStr);
   } else {
-    setStrAsValue(currentValueStr + numStr);
+      setStrAsValue(currentValueStr + numStr);
   }
 };
 
