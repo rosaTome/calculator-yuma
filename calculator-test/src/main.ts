@@ -71,7 +71,7 @@ const handleNumberClick = (numStr: string): void => {
 const getResultOfOperationAsStr = (): string => {
   const currentValueNum = getValueAsNum();
   const valueNumInMemory = parseFloat(valueStrInMemory!);
-  let newValueNum: number;
+  let newValueNum: number = 0;
   if (operatorInMemory === 'addition') {
     newValueNum = valueNumInMemory + currentValueNum;
   } else if (operatorInMemory === 'subtraction') {
