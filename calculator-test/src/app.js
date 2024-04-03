@@ -121,16 +121,54 @@ plusminusEl.addEventListener('click', () => {
     }
 });
 
+percentEl.addEventListener('click', () => {
+    const currentValueNum = getValueAsNum();
+    const newValueNum = currentValueNum / 100;
+    setStrAsValue(newValueNum.toString());
+    valueStrInMemory = null;
+    operatorInMemory = null;
+});
 
 // add event listeners to operators 
+additionEl.addEventListener('click', () => {
+    handleNumberClick('addition');
+});
+
+subtractionEl.addEventListener('click', () => {
+    handleNumberClick('subtraction');
+});
+
+multiplicationEl.addEventListener('click', () => {
+    handleNumberClick('multiplication');
+});
+
+divisionEl.addEventListener('click', () => {
+    handleNumberClick('division');
+});
+
+equalEl.addEventListener('click', () => {
+    if (valueStrInMemory) {
+        setStrAsValue(getResultOfOperationsAsStr());
+        valueStrInMemory = null;
+        operatorInMemory = null;
+    }
+});
+
 
 // add event listeners to numbers and buttons 
 for (let i = 0; i < numberElArray.length; i++) {
     const numberEl = numberElArray[i];
     numberEl.addEventListener('click', () => {
         handleNumberClick(i.toString());
-    })
+    });
 }
+
+decimalEl.addEventListener('click', () => {
+    const currentValueStr = getValueAsStr();
+    if(!currentValueStr.includes('.')) {
+        setStrAsValue(currentValueStr + '.');
+    }
+});
 
 
 
