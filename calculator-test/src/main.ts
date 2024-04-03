@@ -85,18 +85,15 @@ const getResultOfOperationAsStr = (): string => {
   return newValueNum.toString();
 };
 
-const handleOperatorClick = (operation: string): void => {
+const handleOperatorClick = (operator: string): void => {
   const currentValueStr = getValueAsStr();
-
-  if (!valueStrInMemory) {
-    valueStrInMemory = currentValueStr;
-    operatorInMemory = operation;
-    setStrAsValue('0');
-    return;
-  }
-  valueStrInMemory = getResultOfOperationAsStr();
-  operatorInMemory = operation;
-  setStrAsValue('0');
+    if (!valueStrInMemory) {
+        valueStrInMemory = currentValueStr;
+    } else {
+        setStrAsValue('0');
+        valueStrInMemory = null; 
+    }
+    operatorInMemory = operator;
 };
 
 // Add Event Listeners to functions

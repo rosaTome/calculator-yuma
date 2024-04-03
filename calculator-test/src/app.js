@@ -91,13 +91,11 @@ const handleOperatorClick = (operator) => {
     const currentValueStr = getValueAsStr();
     if (!valueStrInMemory) {
         valueStrInMemory = currentValueStr;
-        operatorInMemory = operator;
+    } else {
         setStrAsValue('0');
-        return;
+        valueStrInMemory = null; 
     }
-    valueStrInMemory = getResultOfOperationsAsStr();
     operatorInMemory = operator;
-    setStrAsValue('0');
 };
 
 // add event listeners to functions
