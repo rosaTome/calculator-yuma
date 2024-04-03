@@ -39,8 +39,9 @@ body {
 
 .buttons-container {
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
 
     .button {
         height: 110px;
@@ -55,12 +56,10 @@ body {
         &.function {
             color: $primary-color;
             background-color: $tertiary-color-light;
-
         }
 
         &.operator {
             background-color: $secondary-color;
-
         }
     }
 }
