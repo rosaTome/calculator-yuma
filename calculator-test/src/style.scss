@@ -1,5 +1,5 @@
 $primary-color: #000000;
-$secondary-color: rgb(255, 157, 0);
+$secondary-color: rgb(32, 195, 111);
 $tertiary-color-dark: rgb(84, 84, 84);
 $tertiary-color-light: rgb(199, 197, 197);
 $quaternary-color: rgb(255, 255, 255);
@@ -47,7 +47,7 @@ body {
         height: 110px;
         width: 110px;
         font-size: 45px;
-        border-radius: 58px;
+        border-radius: 55px;
         background-color: $tertiary-color-dark;
         display: flex;
         justify-content: center;
@@ -61,6 +61,12 @@ body {
         &.operator {
             background-color: $secondary-color;
         }
+
+        &.number-0 {
+            width: 260px;
+            justify-content: flex-start;
+            padding-left: 40px;
+            grid-column: 1 / span 2;
+        }
     }
 }
-

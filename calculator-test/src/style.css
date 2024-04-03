@@ -38,7 +38,7 @@ body {
   height: 110px;
   width: 110px;
   font-size: 45px;
-  border-radius: 58px;
+  border-radius: 55px;
   background-color: rgb(84, 84, 84);
   display: flex;
   justify-content: center;
@@ -49,5 +49,11 @@ body {
   background-color: rgb(199, 197, 197);
 }
 .buttons-container .button.operator {
-  background-color: rgb(255, 157, 0);
+  background-color: rgb(32, 195, 111);
+}
+.buttons-container .button.number-0 {
+  width: 260px;
+  justify-content: flex-start;
+  padding-left: 40px;
+  grid-column: 1/span 2;
 }/*# sourceMappingURL=style.css.map */
