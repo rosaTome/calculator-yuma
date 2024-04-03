@@ -13,6 +13,10 @@ $quaternary-color: rgb(255, 255, 255);
 body {
     font-family: "Helvetica Neue", sans-serif;
     margin: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .calculator {

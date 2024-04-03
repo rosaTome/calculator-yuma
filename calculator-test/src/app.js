@@ -1,3 +1,4 @@
+import './style.css';
 import './style.scss';
 import './main.ts';
 
@@ -90,12 +91,12 @@ const handleOperatorClick = (operator) => {
     const currentValueStr = getValueAsStr();
     if (!valueStrInMemory) {
         valueStrInMemory = currentValueStr;
-        operatorInMemory = operation;
+        operatorInMemory = operator;
         setStrAsValue('0');
         return;
     }
     valueStrInMemory = getResultOfOperationsAsStr();
-    operatorInMemory = operation;
+    operatorInMemory = operator;
     setStrAsValue('0');
 };
 
