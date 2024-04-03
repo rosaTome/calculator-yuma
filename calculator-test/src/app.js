@@ -1,11 +1,12 @@
-// const { log } = require("console");
+import './style.scss';
+import './main.ts';
 
 // DOM Elements 
 const valueEl = document.querySelector('.value');
 
 // function elements
 const acEl = document.querySelector('.ac');
-const plusminusEl = document.querySelector('.pm');
+const pmEl = document.querySelector('.plusminus');
 const percentEl = document.querySelector('.percentage');
 
 // operators elements 
@@ -105,7 +106,7 @@ acEl.addEventListener('click', () => {
     operatorInMemory = null;
 });
 
-plusminusEl.addEventListener('click', () => {
+pmEl.addEventListener('click', () => {
     const currentValueNum = getValueAsNum();
     const currentValueStr = getValueAsStr();
 
