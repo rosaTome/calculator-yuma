@@ -4,7 +4,7 @@ My repository contains the source code for a simple calculator web application b
 
 ## Preview
 
-![Calculator Preview](./images/calculator_preview.png)
+![Calculator Preview](./calculator-test/images/calculator_preview.png)
 
 ## Features
 - Addition, subtraction, multiplication, and division operations
