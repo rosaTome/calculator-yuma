@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+
 $primary-color: #000000;
 $secondary-color: rgb(32, 195, 111);
 $tertiary-color-dark: rgb(84, 84, 84);
@@ -19,13 +21,19 @@ body {
     align-items: center;
 }
 
+header {
+    font-family: "Homemade Apple";
+    font-size: 50px;
+    color: $secondary-color;
+}
+
 .calculator {
     background-color: $primary-color;
     color: $quaternary-color;
-    width: 563px;
-    height: 1218px;
+    width: 400;
+    height: 120;
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 100px;
 
     .display-container {
         height: 250px;
@@ -55,8 +63,7 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            cursor: pointer;
-    
+
             &.function {
                 color: $primary-color;
                 background-color: $tertiary-color-light;
@@ -72,23 +79,11 @@ body {
                 padding-left: 40px;
                 grid-column: 1 / span 2;
             }
+
+            &:active { 
+                filter: brightness(80%);
+                transition: filter 0.3s; 
+            }
         }
     }
 }
-
-// media queries for tablet and desktop 
-
-@media only screen and (min-width: 768px) {
-    .calculator {
-        width: 70%;
-        height: 80vh;
-    }
-}
-
-@media only screen and (min-width: 1024px) {
-    .calculator {
-        width: 50%;
-        height: 80vh;
-    }
-}
-

@@ -1,7 +1,3 @@
-import './style.css';
-import './style.scss';
-import './main.ts';
-
 // DOM Elements 
 const valueEl = document.querySelector('.value');
 
