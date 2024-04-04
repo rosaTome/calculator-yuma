@@ -28,16 +28,13 @@ const numberElArray: HTMLButtonElement[] = [
     number0El!, number1El!, number2El!, number3El!, number4El!, number5El!, number6El!, number7El!, number8El!, number9El!, 
 ]
 
-//  if 
 if(!valueEl || !acEl || !pmEl || !percentEl || !additionEl || !subtractionEl || !multiplicationEl || !divisionEl || !equalEl || !decimalEl || !number0El || !number1El || !number2El || !number3El || !number4El || !number5El || !number6El || !number7El || !number8El || !number9El ) {
     throw new Error("issue with selector")
 }
 
-// variables 
 let valueStrInMemory: string | null = null;
 let operatorInMemory: string | null = null;
 
-// Functions
 const getValueAsStr = (): string => valueEl?.textContent?.split(',').join('') || '';
 
 const getValueAsNum = (): number => {
@@ -96,7 +93,6 @@ const handleOperatorClick = (operator: string): void => {
     operatorInMemory = operator;
 };
 
-// Add Event Listeners to functions
 acEl.addEventListener('click', () => {
   setStrAsValue('0');
   valueStrInMemory = null;
@@ -124,7 +120,6 @@ percentEl.addEventListener('click', () => {
   operatorInMemory = null;
 });
 
-// add event listeners to operators
 additionEl.addEventListener('click', () => {
   handleOperatorClick('addition');
 });
@@ -145,7 +140,6 @@ equalEl.addEventListener('click', () => {
   }
 });
 
-// Add Event Listeners to numbers and decimal
 for (let i = 0; i < numberElArray.length; i++) {
   const numberEl = numberElArray[i];
   numberEl.addEventListener('click', () => {

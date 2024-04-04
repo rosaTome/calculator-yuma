@@ -1,19 +1,15 @@
-// DOM Elements 
 const valueEl = document.querySelector('.value');
 
-// function elements
 const acEl = document.querySelector('.ac');
 const pmEl = document.querySelector('.plusminus');
 const percentEl = document.querySelector('.percentage');
 
-// operators elements 
 const additionEl = document.querySelector('.addition');
 const subtractionEl = document.querySelector('.subtraction');
 const multiplicationEl = document.querySelector('.multiplication');
 const divisionEl = document.querySelector('.division');
 const equalEl = document.querySelector('.equal');
 
-// numbers and decimal elements 
 const decimalEl = document.querySelector('.decimal');
 const number0El = document.querySelector('.number-0');
 const number1El = document.querySelector('.number-1');
@@ -26,16 +22,13 @@ const number7El = document.querySelector('.number-7');
 const number8El = document.querySelector('.number-8');
 const number9El = document.querySelector('.number-9');
 
-// numbers array for loop
 const numberElArray = [
     number0El, number1El, number2El, number3El, number4El, number5El, number6El, number7El, number8El, number9El, 
 ];
 
-// variables 
 let valueStrInMemory = null;
 let operatorInMemory = null;
 
-// Functions 
 const getValueAsStr = () => valueEl.textContent.split(',').join('');
 
 const getValueAsNum = () => {
@@ -94,7 +87,6 @@ const handleOperatorClick = (operator) => {
     operatorInMemory = operator;
 };
 
-// add event listeners to functions
 acEl.addEventListener('click', () => {
     setStrAsValue('0');
     valueStrInMemory = null;
@@ -125,7 +117,6 @@ percentEl.addEventListener('click', () => {
     operatorInMemory = null;
 });
 
-// add event listeners to operators 
 additionEl.addEventListener('click', () => {
     handleNumberClick('addition');
 });
@@ -150,7 +141,6 @@ equalEl.addEventListener('click', () => {
     }
 });
 
-// add event listeners to numbers and buttons 
 for (let i = 0; i < numberElArray.length; i++) {
     const numberEl = numberElArray[i];
     numberEl.addEventListener('click', () => {
