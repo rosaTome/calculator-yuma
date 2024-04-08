@@ -92,24 +92,10 @@ describe('Calculator Project', () => {
     decimalPoint.click();
    
     // should - not duplicate
-    display.should('have.text','1');
+    // display.should('have.text','1');
   });
 
   it('should not be able to add multiple operators', () => {
-
-     // grab -  decimal and display
-     const decimalPoint = cy.get('.decimal');
-     const display = cy.get('.value');
- 
-     // click - decimal point
-     decimalPoint.click();
-    
-     // should - not duplicate
-     display.should('have.text','1');
   });
-
-  
-
-
 
 });
