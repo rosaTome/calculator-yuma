@@ -32,9 +32,11 @@ if(!valueEl || !acEl || !pmEl || !percentEl || !additionEl || !subtractionEl || 
     throw new Error("issue with selector")
 }
 
+// variables 
 let valueStrInMemory: string | null = null;
 let operatorInMemory: string | null = null;
 
+// functions 
 const getValueAsStr = (): string => valueEl?.textContent?.split(',').join('') || '';
 
 const getValueAsNum = (): number => {
@@ -93,6 +95,8 @@ const handleOperatorClick = (operator: string): void => {
     operatorInMemory = operator;
 };
 
+// event listeners to functions 
+
 acEl.addEventListener('click', () => {
   setStrAsValue('0');
   valueStrInMemory = null;
@@ -120,6 +124,7 @@ percentEl.addEventListener('click', () => {
   operatorInMemory = null;
 });
 
+// event listeners to operators
 additionEl.addEventListener('click', () => {
   handleOperatorClick('addition');
 });
@@ -139,6 +144,8 @@ equalEl.addEventListener('click', () => {
     operatorInMemory = null;
   }
 });
+
+// event listeners to numbers and buttons
 
 for (let i = 0; i < numberElArray.length; i++) {
   const numberEl = numberElArray[i];
