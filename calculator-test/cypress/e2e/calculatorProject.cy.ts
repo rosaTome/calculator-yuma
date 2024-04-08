@@ -3,6 +3,8 @@ describe('Calculator Project', () => {
     cy.visit('http://www.localhost:5173/');
   });
 
+  // positive cases 
+
   it('should be able to complete adding operation', () => {
 
     // grab -  number, addition, equal operations and display value (5+5)
@@ -12,7 +14,7 @@ describe('Calculator Project', () => {
     const display = cy.get('.value');
 
 
-    // click - number, addition, numbered again and equal operations (5+5)
+    // click - number, addition, number again and equal operations (5+5)
     five.click();
     addition.click();
     five.click();
@@ -31,7 +33,7 @@ describe('Calculator Project', () => {
     const display = cy.get('.value');
 
 
-    // click - number, subtraction, numbered again and equal operations (5-5)
+    // click - number, subtraction, number again and equal operations (5-5)
     five.click();
     subtraction.click();
     five.click();
@@ -50,7 +52,7 @@ describe('Calculator Project', () => {
     const display = cy.get('.value');
 
 
-    // click - number, multiplication, numbered again and equal operations (5+5)
+    // click - number, multiplication, number again and equal operations (5+5)
     five.click();
     multiplication.click();
     five.click();
@@ -69,7 +71,7 @@ describe('Calculator Project', () => {
     const display = cy.get('.value');
 
 
-    // click - number, addition, numbered again and equal operations (5+5)
+    // click - number, addition, number again and equal operations (5+5)
     five.click();
     division.click();
     five.click();
@@ -79,25 +81,35 @@ describe('Calculator Project', () => {
     display.should('have.text','1');
   });
 
-  it('should be able to complete division operation', () => {
+  // negative cases 
 
-    // grab -  number, division, equal operations and display value (5+5)
-    const five = cy.get('.number-5');
-    const division = cy.get('.division');
-    const equal = cy.get('.equal');
+  it('should not be able to add multiple decimal points', () => {
+    // grab -  decimal and display
+    const decimalPoint = cy.get('.decimal');
     const display = cy.get('.value');
 
-
-    // click - number, addition, numbered again and equal operations (5+5)
-    five.click();
-    division.click();
-    five.click();
-    equal.click();
-
-    // should - display solution to number + number = number (10)
+    // click - decimal point
+    decimalPoint.click();
+   
+    // should - not duplicate
     display.should('have.text','1');
+  });
+
+  it('should not be able to add multiple operators', () => {
+
+     // grab -  decimal and display
+     const decimalPoint = cy.get('.decimal');
+     const display = cy.get('.value');
+ 
+     // click - decimal point
+     decimalPoint.click();
+    
+     // should - not duplicate
+     display.should('have.text','1');
   });
 
   
+
+
 
 });
